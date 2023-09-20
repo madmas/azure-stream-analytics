@@ -3,10 +3,10 @@
 name: CI
 
 env:
-  PROJECT_NAME: <my-asa-project>
+  PROJECT_NAME: my-asa-project
   OUTPUT_PATH: deploy
-  TARGET_RESOURCE_GROUP: <my-resource-group>
-  LOCATION: <East US>       # All available locations can be found at: https://azure.microsoft.com/explore/global-infrastructure/products-by-region/?products=stream-analytics&regions=all
+  TARGET_RESOURCE_GROUP: azr-sample-docker_group
+  LOCATION: East US       # All available locations can be found at: https://azure.microsoft.com/explore/global-infrastructure/products-by-region/?products=stream-analytics&regions=all
   OVERRIDE_PARAMETERS: Inputs_ClickStream_DataSource_SharedAccessPolicyKey=${{ secrets.ASA_INPUT }} Outputs_BlobOutput_DataSource_AccountKey=${{ secrets.ASA_OUTPUT }}
 
 # Credentials for Azure resource is NULL inside the parameter files, it has to be overrided in `OVERRIDE_PARAMETERS` variables above.
